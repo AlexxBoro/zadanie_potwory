@@ -4,7 +4,7 @@ import './Monster.scss';
 class Monster extends React.Component{
     render(){
         return(
-            <div class="monster">tu bedzie info o konkretnym potworze na liscie potworow! </div>
+            <div className="monster">tu bedzie info o konkretnym potworze na liscie potworow! </div>
         );
     }
 }

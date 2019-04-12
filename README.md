@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-For this project I use this API that runs on http://localhost:8080 :
+For this project I use an API installed locally that runs on http://localhost:8080 from:
 [https://github.com/codequest-eu/monsters-api](https://github.com/codequest-eu/monsters-api)
 
 ## Available Scripts
