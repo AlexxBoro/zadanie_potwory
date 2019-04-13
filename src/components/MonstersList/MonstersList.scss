@@ -1,4 +1,16 @@
-.monsters-list{
-    background-color: beige;
-    border: 2px solid red;
+.monsters-list {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.monsters-list__monster {
+  border: 1px solid orange;
+}
+
+.monsters-list__monster--title {
+  text-align: center;
 }
