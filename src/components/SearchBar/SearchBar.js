@@ -10,8 +10,6 @@ class SearchBar extends React.Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-
-    console.log(this.state.monsterName);
     this.props.onMonsterNameSubmit(this.state.monsterName);
   };
 
@@ -19,7 +17,9 @@ class SearchBar extends React.Component {
     return (
       <section className="search-bar">
         <form onSubmit={this.onFormSubmit}>
-          <label>type monster's name and press Enter</label>
+          <label>
+            type monster's name and press <span>Enter</span>
+          </label>
           <input
             type="text"
             value={this.state.monsterName}

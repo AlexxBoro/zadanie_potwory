@@ -1,4 +1,19 @@
-body{
-    font-family: 'Indie Flower', cursive;
-    //backup czcionki dla niektorych przegladarek!
+.app-container {
+  font-family: "Indie Flower", "Times New Roman";
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(204, 204, 216);
+  box-shadow: 5px 10px 10px rgb(48, 48, 73);
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: 1em 1em 0 1em;
+}
+
+.app-container__title {
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgb(199, 55, 91);
+  letter-spacing: 0.2em;
 }

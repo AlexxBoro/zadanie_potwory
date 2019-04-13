@@ -1,16 +1,27 @@
 .monsters-list {
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 .monsters-list__monster {
-  border: 1px solid orange;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgb(174, 174, 184);
+  border-radius: 10px;
+  margin: 1em;
+}
+
+.monsters-list__image {
+  width: 120px;
+  height: 120px;
+  margin: 0.5em;
 }
 
 .monsters-list__monster--title {
+  font-size: 1.3em;
   text-align: center;
+  padding: 0.5em;
 }

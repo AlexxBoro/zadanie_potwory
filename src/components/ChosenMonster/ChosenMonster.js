@@ -9,19 +9,62 @@ class ChosenMonster extends React.Component {
 
     return (
       <div className="chosen-monster">
-        tutaj bedzie info o wybranym potworze! ChosenMonster Component
-        <h1>{chosenMonster.name}</h1>
-        <img src={monsterImages.big} alt={chosenMonster.name} />
-        <p>{chosenMonster.description}</p>
-        <h2>statistics:</h2>
-        <span>power: </span>
-        <span>{monsterStats.power}</span>
-        <br />
-        <span>danger: </span>
-        <span>{monsterStats.danger}</span>
-        <br />
-        <span>frequency: </span>
-        <span>{monsterStats.frequency}</span>
+        <p className="chosen-monster__title">{chosenMonster.name}</p>
+
+        <div className="chosen-monster__container">
+          <img
+            className="chosen-monster__container__img"
+            src={monsterImages.big}
+            alt={chosenMonster.name}
+          />
+          <div className="chosen-monster__container__info">
+            <p className="chosen-monster__container__info--descr">
+              {chosenMonster.description}
+            </p>
+
+            <p>power: </p>
+            <div className="chosen-monster__container__info__stat-container">
+              <div className="chosen-monster__container__info__range">
+                <div
+                  style={{
+                    width: `${monsterStats.power * 100 + "%"}`,
+                    height: "15px",
+                    backgroundColor: "yellow"
+                  }}
+                />
+              </div>
+              <span>{Math.floor(monsterStats.power * 100) + "%"}</span>
+            </div>
+
+            <p>danger: </p>
+            <div className="chosen-monster__container__info__stat-container">
+              <div className="chosen-monster__container__info__range">
+                <div
+                  style={{
+                    width: `${monsterStats.danger * 100 + "%"}`,
+                    height: "15px",
+                    backgroundColor: "rgb(212,78,110)"
+                  }}
+                />
+              </div>
+              <span>{Math.floor(monsterStats.danger * 100) + "%"}</span>
+            </div>
+
+            <p>frequency: </p>
+            <div className="chosen-monster__container__info__stat-container">
+              <div className="chosen-monster__container__info__range">
+                <div
+                  style={{
+                    width: `${monsterStats.frequency * 100 + "%"}`,
+                    height: "15px",
+                    backgroundColor: "rgb(80, 180, 158)"
+                  }}
+                />
+              </div>
+              <span>{Math.floor(monsterStats.frequency * 100) + "%"}</span>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -18,10 +18,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.onMonsterNameSubmit("dee");
+
     axios
       .get("http://localhost:8080/api/v1/monsters")
       .then(response => {
-        console.log(response.data.data);
+        // console.log(response.data.data);
         this.setState({ monsters: response.data.data });
       })
       .catch(function(error) {
@@ -30,14 +32,14 @@ class App extends React.Component {
   }
 
   onMonsterNameSubmit(monsterName) {
-    console.log(monsterName);
+    // console.log(monsterName);
     // tu musi byc znow zapytanie do tego api bo dopiero tutaj wiemy co wpisal user
     axios
       .get(`http://localhost:8080/api/v1/monster/${monsterName}`)
       .then(response => {
-        console.log(response.data.data);
-        console.log(response.data.data.statistics);
-        console.log(response.data.data.images);
+        // console.log(response.data.data);
+        // console.log(response.data.data.statistics);
+        // console.log(response.data.data.images);
         this.setState({
           selectedMonster: response.data.data,
           selectedMonsterStats: response.data.data.statistics,
@@ -51,15 +53,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-        <SearchBar onMonsterNameSubmit={this.onMonsterNameSubmit} />
-        <ChosenMonster
-          selectedMonster={this.state.selectedMonster}
-          selectedMonsterStats={this.state.selectedMonsterStats}
-          selectedMonsterImages={this.state.selectedMonsterImages}
-        />
-        <MonstersList allmonsters={this.state.monsters} />
-      </>
+      <div className="app-container">
+        <header>
+          <h1 className="app-container__title">Monsters</h1>
+        </header>
+        <main>
+          <SearchBar onMonsterNameSubmit={this.onMonsterNameSubmit} />
+          <ChosenMonster
+            selectedMonster={this.state.selectedMonster}
+            selectedMonsterStats={this.state.selectedMonsterStats}
+            selectedMonsterImages={this.state.selectedMonsterImages}
+          />
+          <MonstersList allmonsters={this.state.monsters} />
+        </main>
+      </div>
     );
   }
 }
