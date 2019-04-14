@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.onMonsterNameSubmit("dee");
+    this.onMonsterNameSubmit("fooz");
 
     axios
       .get("http://localhost:8080/api/v1/monsters")
