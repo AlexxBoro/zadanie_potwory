@@ -19,11 +19,9 @@ class App extends React.Component {
 
   componentDidMount() {
     this.onMonsterNameSubmit("fooz");
-
     axios
       .get("http://localhost:8080/api/v1/monsters")
       .then(response => {
-        // console.log(response.data.data);
         this.setState({ monsters: response.data.data });
       })
       .catch(function(error) {
@@ -32,14 +30,9 @@ class App extends React.Component {
   }
 
   onMonsterNameSubmit(monsterName) {
-    // console.log(monsterName);
-    // tu musi byc znow zapytanie do tego api bo dopiero tutaj wiemy co wpisal user
     axios
       .get(`http://localhost:8080/api/v1/monster/${monsterName}`)
       .then(response => {
-        // console.log(response.data.data);
-        // console.log(response.data.data.statistics);
-        // console.log(response.data.data.images);
         this.setState({
           selectedMonster: response.data.data,
           selectedMonsterStats: response.data.data.statistics,

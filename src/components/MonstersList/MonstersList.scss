@@ -12,14 +12,14 @@
   box-shadow: 5px 5px 10px rgb(174, 174, 184);
   border-radius: 10px;
   margin: 1em;
-  width:135px;
-  height:190px;
-  display:flex;
+  width: 135px;
+  height: 190px;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  &--0{
-    img{
+  &--0 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 2s;
@@ -27,8 +27,8 @@
       animation-timing-function: linear;
     }
   }
-  &--1{
-    img{
+  &--1 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 1s;
@@ -36,8 +36,8 @@
       animation-timing-function: linear;
     }
   }
-  &--2{
-    img{
+  &--2 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 3s;
@@ -45,8 +45,8 @@
       animation-timing-function: linear;
     }
   }
-  &--3{
-    img{
+  &--3 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 2s;
@@ -54,8 +54,8 @@
       animation-timing-function: linear;
     }
   }
-  &--4{
-    img{
+  &--4 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 3s;
@@ -63,8 +63,8 @@
       animation-timing-function: linear;
     }
   }
-  &--5{
-    img{
+  &--5 {
+    img {
       animation-name: animationMonster;
       animation-duration: 2s;
       animation-delay: 0;
@@ -86,7 +86,7 @@
   padding: 0.5em;
 }
 
-@keyframes animationMonster{
+@keyframes animationMonster {
   0% {
     opacity: 1;
     width: 120px;
