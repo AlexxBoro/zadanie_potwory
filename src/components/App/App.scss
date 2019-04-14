@@ -1,45 +1,23 @@
-@media (min-width: 461px) {
-  .app-container {
-    font-family: "Indie Flower", "Times New Roman";
-    width: 80%;
-    margin: 0 auto;
-    background-color: rgb(204, 204, 216);
-    box-shadow: 5px 10px 10px rgb(48, 48, 73);
-    border-radius: 10px;
-    margin-top: 1em;
-    padding: 1em 1em 0 1em;
-  }
-
-  .app-container__title {
-    font-size: 3.5em;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 5px 6px 4px rgb(199, 55, 91);
-    letter-spacing: 0.2em;
-  }
+.app-container {
+  font-family: "Indie Flower", "Times New Roman";
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(204, 204, 216);
+  box-shadow: 5px 10px 10px rgb(48, 48, 73);
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: 1em 1em 0 1em;
 }
 
-@media (min-width: 0px) and (max-width: 460px) {
-  .app-container {
-    font-family: "Indie Flower", "Times New Roman";
-    width: 80%;
-    margin: 0 auto;
-    background-color: rgb(204, 204, 216);
-    box-shadow: 5px 10px 10px rgb(48, 48, 73);
-    border-radius: 10px;
-    margin-top: 1em;
-    padding: 1em 1em 0 1em;
-  }
-
-  .app-container__title {
+.app-container__title {
+  font-size: 3.5em;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 5px 6px 4px rgb(199, 55, 91);
+  letter-spacing: 0.2em;
+  @media (max-width: 460px) {
     font-size: 3em;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 5px 6px 4px rgb(199, 55, 91);
-    letter-spacing: 0.2em;
   }
 }

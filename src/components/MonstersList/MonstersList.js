@@ -9,7 +9,7 @@ class MonstersList extends React.Component {
           key={i}
           className={`monsters-list__monster monsters-list__monster--${i}`}
         >
-          <p className="monsters-list__monster--title">{e.name}</p>
+          <p className="monsters-list__monster__title">{e.name}</p>
           <div style={{ height: "120px", margin: "0 auto" }}>
             <img
               className="monsters-list__image"

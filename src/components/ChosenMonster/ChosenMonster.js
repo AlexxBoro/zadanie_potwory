@@ -18,7 +18,7 @@ class ChosenMonster extends React.Component {
             alt={chosenMonster.name}
           />
           <div className="chosen-monster__container__info">
-            <p className="chosen-monster__container__info--descr">
+            <p className="chosen-monster__container__info__descr">
               {chosenMonster.description}
             </p>
 
