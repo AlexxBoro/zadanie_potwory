@@ -3,6 +3,11 @@ import "./ChosenMonster.scss";
 
 class ChosenMonster extends React.Component {
   render() {
+    if(this.props.selectedMonster.length !== 0){
+      console.log(this.props.selectedMonster);
+      console.log(this.props.selectedMonster.length);
+
+
     const chosenMonster = this.props.selectedMonster;
     const monsterStats = this.props.selectedMonsterStats;
     const monsterImages = this.props.selectedMonsterImages;
@@ -67,6 +72,13 @@ class ChosenMonster extends React.Component {
         </div>
       </div>
     );
+  } else if (this.props.selectedMonster.length === 0) {
+    return(
+      <div className="chosen-monster">
+        <p className="chosen-monster__title">error connecting to API... :-(</p><br></br>
+      </div>
+    )
+  }
   }
 }
 
