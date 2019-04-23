@@ -18,6 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log("wykonuje sie component did mount w APP, w nim zapytanie do api o kolekcje potworow")
     this.onMonsterNameSubmit("fooz");
     axios
       .get("http://localhost:8080/api/v1/monsters")
@@ -43,6 +44,7 @@ class App extends React.Component {
   }
 
   onMonsterNameSubmit(monsterName) {
+    console.log("funkcja on monster sumbmit, drugie zapytanie o konkretnego potwora")
     axios
       .get(`http://localhost:8080/api/v1/monster/${monsterName}`)
       .then(response => {
@@ -58,6 +60,7 @@ class App extends React.Component {
           // that falls out of the range of 2xx
           console.log(error.response.data);
           console.log(error.response.status);
+          alert("incorrect name of a monster!");
           console.log(error.response.headers);
         } else if (error.request) {
           // The request was made but no response was received
@@ -71,6 +74,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log("render komponentu APP");
     return (
       <div className="app-container">
         <header>
