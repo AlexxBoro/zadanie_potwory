@@ -3,15 +3,30 @@ import "./MonstersList.scss";
 
 class MonstersList extends React.Component {
   render() {
-    console.log("renderuje liste potworow - MonstersList")
-    if(this.props.allmonsters.length !== 0){
+    console.log("renderuje liste potworow - MonstersList");
+    // console.log(this.props.selectedMonster);
+
+    if (this.props.allmonsters.length !== 0) {
       const monsters = this.props.allmonsters.map((e, i) => {
+        console.log(e);
         return (
           <div
             key={i}
-            className={`monsters-list__monster monsters-list__monster--${i}`}
+            className={
+              this.props.selectedMonster.name === e.name
+                ? `monsters-list__monster monsters-list__monster--${i} frame`
+                : `monsters-list__monster monsters-list__monster--${i}`
+            }
           >
-            <p className="monsters-list__monster__title">{e.name}</p>
+            <p
+              className={
+                this.props.selectedMonster.name === e.name
+                  ? "monsters-list__monster__title active"
+                  : "monsters-list__monster__title"
+              }
+            >
+              {e.name}
+            </p>
             <div style={{ height: "120px", margin: "0 auto" }}>
               <img
                 className="monsters-list__image"
@@ -23,11 +38,14 @@ class MonstersList extends React.Component {
         );
       });
       return <section className="monsters-list">{monsters}</section>;
-    }
-    else {
-      return(
-        <img style={{width:'150px', height: '100px'}} src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="loader"/>
-      )
+    } else {
+      return (
+        <img
+          style={{ width: "150px", height: "100px" }}
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
+          alt="loader"
+        />
+      );
     }
   }
 }

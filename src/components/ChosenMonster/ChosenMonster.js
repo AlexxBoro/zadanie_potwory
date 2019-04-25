@@ -79,9 +79,6 @@ class ChosenMonster extends React.Component {
         </div>
       );
     }
-  return(
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="loader"/>
-  )  
   }
 }
 

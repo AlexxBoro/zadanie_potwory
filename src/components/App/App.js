@@ -18,14 +18,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log("wykonuje sie component did mount w APP, w nim zapytanie do api o kolekcje potworow")
+    console.log(
+      "wykonuje sie component did mount w APP, w nim zapytanie do api o kolekcje potworow"
+    );
     this.onMonsterNameSubmit("fooz");
     axios
       .get("http://localhost:8080/api/v1/monsters")
       .then(response => {
         this.setState({ monsters: response.data.data });
       })
-      .catch(function (error) {
+      .catch(function(error) {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
@@ -37,14 +39,16 @@ class App extends React.Component {
           console.log(error.request);
         } else {
           // Something happened in setting up the request that triggered an Error
-          console.log('Error', error.message);
+          console.log("Error", error.message);
         }
         console.log(error.config);
       });
   }
 
   onMonsterNameSubmit(monsterName) {
-    console.log("funkcja on monster sumbmit, drugie zapytanie o konkretnego potwora")
+    console.log(
+      "funkcja on monster sumbmit, drugie zapytanie o konkretnego potwora"
+    );
     axios
       .get(`http://localhost:8080/api/v1/monster/${monsterName}`)
       .then(response => {
@@ -54,7 +58,7 @@ class App extends React.Component {
           selectedMonsterImages: response.data.data.images
         });
       })
-      .catch(function (error) {
+      .catch(function(error) {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
@@ -67,7 +71,7 @@ class App extends React.Component {
           console.log(error.request);
         } else {
           // Something happened in setting up the request that triggered an Error
-          console.log('Error', error.message);
+          console.log("Error", error.message);
         }
         console.log(error.config);
       });
@@ -87,7 +91,10 @@ class App extends React.Component {
             selectedMonsterStats={this.state.selectedMonsterStats}
             selectedMonsterImages={this.state.selectedMonsterImages}
           />
-          <MonstersList allmonsters={this.state.monsters} />
+          <MonstersList
+            allmonsters={this.state.monsters}
+            selectedMonster={this.state.selectedMonster}
+          />
         </main>
       </div>
     );

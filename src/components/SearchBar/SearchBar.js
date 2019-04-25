@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
       <section className="search-bar">
         <form onSubmit={this.onFormSubmit}>
           <label>
-            type monster's name and press <span>Enter</span>
+            type monster's name and press <strong>Enter</strong>
           </label>
           <input
             type="text"

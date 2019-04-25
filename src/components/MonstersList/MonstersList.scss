@@ -5,6 +5,14 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
+  .active{
+    color: rgb(196, 99, 196);
+    font-weight: 600;
+    text-transform:uppercase; 
+  }
+  .frame{
+    border:2px solid rgb(196, 99, 196);
+  }
   &__monster {
     background-color: white;
     box-shadow: 5px 5px 10px rgb(174, 174, 184);
