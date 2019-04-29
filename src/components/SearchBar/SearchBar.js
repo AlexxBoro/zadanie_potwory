@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
   state = { monsterName: "" };
 
   onInputChange = event => {
-    this.setState({ monsterName: event.target.value.toLowerCase() });
+      this.setState({ monsterName: event.target.value.toLowerCase() });
   };
 
   onFormSubmit = event => {

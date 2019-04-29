@@ -21,11 +21,13 @@ class App extends React.Component {
     console.log(
       "wykonuje sie component did mount w APP, w nim zapytanie do api o kolekcje potworow"
     );
-    this.onMonsterNameSubmit("fooz");
+    
     axios
       .get("http://localhost:8080/api/v1/monsters")
       .then(response => {
         this.setState({ monsters: response.data.data });
+        const firstMonster = response.data.data[0].name;
+        this.onMonsterNameSubmit(firstMonster.toLowerCase());
       })
       .catch(function(error) {
         if (error.response) {
