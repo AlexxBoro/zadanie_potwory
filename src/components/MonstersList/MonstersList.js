@@ -5,29 +5,33 @@ class MonstersList extends React.Component {
   render() {
     console.log("renderuje liste potworow - MonstersList");
 
-    if (this.props.allmonsters.length) {
+    if (this.props.allmonsters) {
       const monsters = this.props.allmonsters.map((e, i) => {
         return (
           <div
             key={e.name}
             className={
               this.props.selectedMonster.name === e.name
-                ? `monsters-list__monster monsters-list__monster--${i} frame`
-                : `monsters-list__monster monsters-list__monster--${i}`
+                ? `monsters-list__monster monsters-list__monster active-frame`
+                : `monsters-list__monster monsters-list__monster`
             }
           >
-            <p
-              className={
-                this.props.selectedMonster.name === e.name
-                  ? "monsters-list__monster__title active"
-                  : "monsters-list__monster__title"
-              }
-            >
-              {e.name}
-            </p>
-            <div style={{ height: "120px", margin: "0 auto" }}>
+            <div>
+              <p
+                className={
+                  this.props.selectedMonster.name === e.name
+                    ? "monsters-list__monster__title active-text"
+                    : "monsters-list__monster__title"
+                }
+              >
+                {e.name}
+              </p>
               <img
-                className="monsters-list__image"
+                className={
+                  i % 2 === 0
+                    ? "monsters-list__image monsters-list__image--animation1"
+                    : "monsters-list__image monsters-list__image--animation2"
+                }
                 src={e.images.thumb}
                 alt={e.name}
               />

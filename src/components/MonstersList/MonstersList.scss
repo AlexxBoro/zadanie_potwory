@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  .active{
+  .active-text{
     color: rgb(196, 99, 196);
     font-weight: 600;
     text-transform:uppercase; 
   }
-  .frame{
+  .active-frame{
     border:2px solid rgb(196, 99, 196);
   }
   &__monster {
@@ -24,65 +24,26 @@
     justify-content: center;
     flex-direction: column;
     align-content: center;
-    &--0 {
-      img {
-        animation-name: animationMonster;
-        animation-duration: 2s;
-        animation-delay: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-    }
-    &--1 {
-      img {
-        animation-name: animationMonster;
+  }
+  &__image {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0.5em;
+    
+    &--animation1{
+      animation-name: animationMonster;
         animation-duration: 2s;
         animation-delay: 1s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-      }
     }
-    &--2 {
-      img {
-        animation-name: animationMonster;
-        animation-duration: 2s;
-        animation-delay: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-    }
-    &--3 {
-      img {
-        animation-name: animationMonster;
-        animation-duration: 2s;
-        animation-delay: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-    }
-    &--4 {
-      img {
-        animation-name: animationMonster;
-        animation-duration: 2s;
-        animation-delay: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-    }
-    &--5 {
-      img {
-        animation-name: animationMonster;
+    &--animation2{
+      animation-name: animationMonster;
         animation-duration: 2s;
         animation-delay: 0;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-      }
     }
-  }
-  &__image {
-    width: 120px;
-    height: 120px;
-    margin: 0.5em;
   }
   &__monster__title {
     font-size: 1.3em;
