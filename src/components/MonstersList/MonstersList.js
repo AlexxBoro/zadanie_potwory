@@ -4,14 +4,12 @@ import "./MonstersList.scss";
 class MonstersList extends React.Component {
   render() {
     console.log("renderuje liste potworow - MonstersList");
-    // console.log(this.props.selectedMonster);
 
-    if (this.props.allmonsters.length !== 0) {
+    if (this.props.allmonsters.length) {
       const monsters = this.props.allmonsters.map((e, i) => {
-        console.log(e);
         return (
           <div
-            key={i}
+            key={e.name}
             className={
               this.props.selectedMonster.name === e.name
                 ? `monsters-list__monster monsters-list__monster--${i} frame`

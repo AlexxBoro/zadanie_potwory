@@ -64,7 +64,7 @@ class App extends React.Component {
           // that falls out of the range of 2xx
           console.log(error.response.data);
           console.log(error.response.status);
-          alert("incorrect name of a monster!");
+          alert("please type a correct name of the monster");
           console.log(error.response.headers);
         } else if (error.request) {
           // The request was made but no response was received

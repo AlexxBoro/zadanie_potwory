@@ -2,9 +2,14 @@ import React from "react";
 import "./ChosenMonster.scss";
 
 class ChosenMonster extends React.Component {
+
+  statPercent = (param) => {
+    return Math.floor(param * 100) + "%";
+  }
+
   render() {
     console.log("render komponentu chosen monster")
-    if (this.props.selectedMonster.length !== 0) {
+    if (this.props.selectedMonster) {
       const chosenMonster = this.props.selectedMonster;
       const monsterStats = this.props.selectedMonsterStats;
       const monsterImages = this.props.selectedMonsterImages;
@@ -29,13 +34,13 @@ class ChosenMonster extends React.Component {
                 <div className="chosen-monster__container__info__range">
                   <div
                     style={{
-                      width: `${monsterStats.power * 100 + "%"}`,
+                      width: `${this.statPercent(monsterStats.power)}`,
                       height: "15px",
                       backgroundColor: "yellow"
                     }}
                   />
                 </div>
-                <span>{Math.floor(monsterStats.power * 100) + "%"}</span>
+                <span>{this.statPercent(monsterStats.power)}</span>
               </div>
 
               <p>danger: </p>
@@ -43,13 +48,13 @@ class ChosenMonster extends React.Component {
                 <div className="chosen-monster__container__info__range">
                   <div
                     style={{
-                      width: `${monsterStats.danger * 100 + "%"}`,
+                      width: `${this.statPercent(monsterStats.danger)}`,
                       height: "15px",
                       backgroundColor: "rgb(212,78,110)"
                     }}
                   />
                 </div>
-                <span>{Math.floor(monsterStats.danger * 100) + "%"}</span>
+                <span>{this.statPercent(monsterStats.danger)}</span>
               </div>
 
               <p>frequency: </p>
@@ -57,19 +62,19 @@ class ChosenMonster extends React.Component {
                 <div className="chosen-monster__container__info__range">
                   <div
                     style={{
-                      width: `${monsterStats.frequency * 100 + "%"}`,
+                      width: `${this.statPercent(monsterStats.frequency)}`,
                       height: "15px",
                       backgroundColor: "rgb(80, 180, 158)"
                     }}
                   />
                 </div>
-                <span>{Math.floor(monsterStats.frequency * 100) + "%"}</span>
+                <span>{this.statPercent(monsterStats.frequency)}</span>
               </div>
             </div>
           </div>
         </div>
       );
-    } else if (this.props.selectedMonster.length === 0) {
+    } else {
       return (
         <div className="chosen-monster">
           <p className="chosen-monster__title">
