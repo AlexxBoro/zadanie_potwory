@@ -18,10 +18,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(
-      "wykonuje sie component did mount w APP, w nim zapytanie do api o kolekcje potworow"
-    );
-    
     axios
       .get("http://localhost:8080/api/v1/monsters")
       .then(response => {
@@ -48,9 +44,6 @@ class App extends React.Component {
   }
 
   onMonsterNameSubmit(monsterName) {
-    console.log(
-      "funkcja on monster sumbmit, drugie zapytanie o konkretnego potwora"
-    );
     axios
       .get(`http://localhost:8080/api/v1/monster/${monsterName}`)
       .then(response => {
@@ -80,7 +73,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("render komponentu APP");
     return (
       <div className="app-container">
         <header>

@@ -8,7 +8,6 @@ class ChosenMonster extends React.Component {
   }
 
   render() {
-    console.log("render komponentu chosen monster")
     if (this.props.selectedMonster) {
       const chosenMonster = this.props.selectedMonster;
       const monsterStats = this.props.selectedMonsterStats;

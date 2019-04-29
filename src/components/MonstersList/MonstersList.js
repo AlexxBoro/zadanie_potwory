@@ -3,8 +3,6 @@ import "./MonstersList.scss";
 
 class MonstersList extends React.Component {
   render() {
-    console.log("renderuje liste potworow - MonstersList");
-
     if (this.props.allmonsters) {
       const monsters = this.props.allmonsters.map((e, i) => {
         return (
