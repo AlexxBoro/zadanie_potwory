@@ -41,7 +41,6 @@ class MonstersList extends React.Component {
     } else {
       return (
         <img
-          style={{ width: "150px", height: "100px" }}
           src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
           alt="loader"
         />

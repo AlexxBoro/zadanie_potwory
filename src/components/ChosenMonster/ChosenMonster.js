@@ -14,7 +14,7 @@ class ChosenMonster extends React.Component {
       const monsterImages = this.props.selectedMonsterImages;
 
       return (
-        <div className="chosen-monster">
+        <section className="chosen-monster">
           <p className="chosen-monster__title">{chosenMonster.name}</p>
 
           <div className="chosen-monster__container">
@@ -71,7 +71,7 @@ class ChosenMonster extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       );
     } else {
       return (
